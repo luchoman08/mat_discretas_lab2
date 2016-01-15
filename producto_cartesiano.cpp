@@ -68,9 +68,10 @@ int main (int args, char * argv[])
 		cout<< "Ingrese el tamaño del vector " << i + 1 <<" :";  cin >>  int_temporal;
 		vector_temporal2 = ingresar_vector(int_temporal);
 		resultado = calcular_producto_dos_vectores(resultado,vector_temporal2);
-	    imprimir_vector(resultado);
+
 	    i++;
 	}
+imprimir_vector(resultado);
 
 return 0;
 }

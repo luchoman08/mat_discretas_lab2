@@ -1,4 +1,7 @@
-#Autor: Luis Gerardo Manrique Cardona                Universidad del Valle
+# Producto cartesiano entre n conjuntos de distintos tamaños
+
+Autor: Luis Gerardo Manrique Cardona               
+Universidad del Valle
 
 Este programa recibe como entrada n vectores de tamaños distintos o iguales, y imprime por pantalla el resultado
 de el producto cartesiano entre ellos, para ejecutar el programa compile y ejecute el programa sin argumentos 
@@ -19,7 +22,7 @@ este puede ser un entero un caracter o incluso un caracter especial.
 El programa funciona de la siguiente forma:
 
       1) Para compilar el archivo:  g++ -o <nombre_programa> producto_cartesiano.cpp 
-         por ejemplo  g++ -o producto producto_cartesiano.cpp 
+         por ejemplo  g++ -o producto_cartesiano producto_cartesiano.cpp 
       2) Luego de compilar el archivo, se ejecuta este tipeando en la terminal ./producto en el caso de que se halla 
          utilizado el ejemplo dado para compilar. El programa no utiliza argumentos.
       3) Al ejecutar el programa lo primero que aparece es lo siguiente:
@@ -28,38 +31,23 @@ El programa funciona de la siguiente forma:
          no tendra un comportamiento correcto.
       4) Se procede a ingresar el tamaño del primer conjunto:
          sale un mensaje como el siguiente:
-         "Ingrese el tamaño del conjunto n :" // Debe ingresar unicamente un dato numerico del 0 al 100000, en caso que el resultado
-         del producto cartesiano sea el conjunto vacio se imprimira "{}".
+         "Ingrese el tamaño del conjunto n :" // Debe ingresar unicamente un dato numerico del 0 al 100000, en caso que el           resultado del producto cartesiano sea el conjunto vacio se imprimira "{}".
       5) Luego de ingresar el tamaño de el conjunto se procede a ingresar cada elemento, aqui un ejemplo:
           Ingrese el tamaño del conjunto 1 :3
           Ingrese el valor [0]: a
           Ingrese el valor [1]: b
           Ingrese el valor [2]: {c,d,e}
        6) El proceso 4 y 5 se repiten tantas veces como se halla indicado en el numero de conjuntos 
-       7) Una vez se halla ingresado la totalidad de los datos de entrada y si estos no fueron erroneos finalmente se imprime 
-          el producto potencia de los conjuntos ingresados, aqui un ejemplo completo de los resultados de la ejecucion del
-          programa:
-          
-          user@name_host:~/mat_discretas_lab2$ g++ -o producto_cartesiano producto_cartesiano.cpp
-          user@name_host:~/mat_discretas_lab2$ ./producto_cartesiano Ingrese el numero de conjuntos que desea ingresar (dos o más): 2
-          Ingrese el tamaño del conjunto 1 :3
-          Ingrese el valor [0]: a
-          Ingrese el valor [1]: {b,c}
-          Ingrese el valor [2]: d
-          Ingrese el tamaño del conjunto 2 :3
-          Ingrese el valor [0]: 1
-          Ingrese el valor [1]: {0,1,2}
-          Ingrese el valor [2]: 18
-          El 
-          {a,1}
-          {a,{0,1,2}}
-          {a,18}
-          {{b,c},1}
-          {{b,c},{0,1,2}}
-          {{b,c},18}
-          {d,1}
-          {d,{0,1,2}}
-          {d,18}
+       7) Una vez se halla ingresado la totalidad de los datos de entrada y si estos no fueron erroneos finalmente se                imprime el producto potencia de los conjuntos ingresados, aqui un ejemplo completo de los resultados de la                 ejecucion del programa:
+          usuario@nombre_equipo:~/mat_discretas_lab2$ ./producto_cartesiano 
+          Ingrese el numero de conjuntos que desea ingresar (dos o más): 2
+          Ingrese el tamaño del conjunto 1 :2
+          Ingrese el valor [0]: {a,b}
+          Ingrese el valor [1]: {}
+          Ingrese el tamaño del conjunto 2 :2
+          Ingrese el valor [0]: c
+          Ingrese el valor [1]: d
+          El conjunto potencia de los conjuntos ingresados es:
+          {{{a,b},c},{{a,b},d},{{},c},{{},d}}
 
-          
 

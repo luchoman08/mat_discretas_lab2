@@ -21,15 +21,18 @@ vector <string> ingresar_vector(int tamano)
 
 int imprimir_vector(vector <string> vector_imprimir)
 {
+        printf("El conjunto potencia de los conjuntos ingresados es:\n");
 	int vector_size = vector_imprimir.size();
-	
+	printf("%c",'{');
 	for(int i = 0; i < vector_size; i++)
 	{
 		printf("%c",'{');
 		printf("%s", vector_imprimir.at(i).c_str());
-		printf("%c\n",'}');
+		printf("%c",'}');
+                if(i<vector_size -1)
+                printf("%c",',');
 	}
-	
+	printf("%c\n",'}');
 	return 0;
 }
 
@@ -59,13 +62,13 @@ int main (int args, char * argv[])
 	int numero_vectores=0, i = 0, int_temporal;
 	vector <string> vector_temporal1, vector_temporal2;
 	vector <string> resultado;
-    cout << "Ingrese el numero de vectores que desea ingresar (dos o más): "; cin>>numero_vectores;
-    cout<< "Ingrese el tamaño del vector " << i + 1 <<" :";  cin >>  int_temporal;
+    cout << "Ingrese el numero de conjuntos que desea ingresar (dos o más): "; cin>>numero_vectores;
+    cout<< "Ingrese el tamaño del conjunto " << i + 1 <<" :";  cin >>  int_temporal;
 	resultado = ingresar_vector(int_temporal);
 	i++;
     while(i<numero_vectores)
     {
-		cout<< "Ingrese el tamaño del vector " << i + 1 <<" :";  cin >>  int_temporal;
+		cout<< "Ingrese el tamaño del conjunto " << i + 1 <<" :";  cin >>  int_temporal;
 		vector_temporal2 = ingresar_vector(int_temporal);
 		resultado = calcular_producto_dos_vectores(resultado,vector_temporal2);
 

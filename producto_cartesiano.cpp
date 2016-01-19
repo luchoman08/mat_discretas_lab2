@@ -4,6 +4,19 @@
 #include <iostream>
 using namespace std;
 
+bool existe_elemento(vector <string> vector_entrada, string cadena_probar)
+
+{
+	int size=vector_entrada.size();
+	for(int i =0; i < size;i++)
+	{
+		if(cadena_probar==vector_entrada.at(i))
+			return true;
+	}
+	return false;
+	
+}
+
 vector <string> ingresar_vector(int tamano)
 {
 	vector <string> vector_ingresado;
@@ -12,13 +25,15 @@ vector <string> ingresar_vector(int tamano)
 	{
 	cout << "Ingrese el valor ["<<i<<"]: ";
 	cin>>temporal;
+	if(!existe_elemento(vector_ingresado,temporal))
+	{
 	vector_ingresado.push_back(temporal);
+     }
     }
     return vector_ingresado;
     
 	
 }
-
 int imprimir_vector(vector <string> vector_imprimir)
 {
         printf("El conjunto potencia de los conjuntos ingresados es:\n");

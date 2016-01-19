@@ -41,9 +41,9 @@ int imprimir_vector(vector <string> vector_imprimir)
 	printf("%c",'{');
 	for(int i = 0; i < vector_size; i++)
 	{
-		printf("%c",'{');
+		printf("%c",'(');
 		printf("%s", vector_imprimir.at(i).c_str());
-		printf("%c",'}');
+		printf("%c",')');
                 if(i<vector_size -1)
                 printf("%c",',');
 	}

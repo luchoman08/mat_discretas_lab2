@@ -2,6 +2,10 @@
 #include <vector>
 #include <string>
 #include <iostream>
+/*
+autor: luchoman
+
+*/
 using namespace std;
 
 bool existe_elemento(vector <string> vector_entrada, string cadena_probar)
